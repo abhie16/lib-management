@@ -1,5 +1,6 @@
 const express = require('express');
 const { getBooks } = require('../src/routes/books.controller');
+const cors = require('cors')
 
 const app = express();
 
@@ -10,6 +11,6 @@ app.use(cors({
 
 app.use(express.json());
 
-app.get('/books', getBooks)
+app.get('/books', getBooks);
 
 module.exports = app;
