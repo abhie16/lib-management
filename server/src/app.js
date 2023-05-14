@@ -1,9 +1,9 @@
 const express = require('express');
-const { getBooks } = require('../src/routes/books.controller');
 const cors = require('cors')
 
-const app = express();
+const { getBooks ,postBook, getBook, deleteBook} = require('../src/controllers/books.controller');
 
+const app = express();
 
 app.use(cors({
     origin: "http://localhost:3000",
@@ -12,5 +12,8 @@ app.use(cors({
 app.use(express.json());
 
 app.get('/books', getBooks);
+app.post('/books', postBook);
+app.get('/books/:bookId', getBook);
+app.delete('/books/:bookId', deleteBook);
 
 module.exports = app;
