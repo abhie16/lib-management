@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import {Table, TableContainer, Tbody, Td, Th, Thead, Tr} from '@chakra-ui/react'
 
 const Books = () => {
     const [data, setData] = useState([]);
@@ -17,12 +18,22 @@ const Books = () => {
 
   return (
     <>
-    <h1>backend data</h1>
-    <ul>
-        {data.map(item =>(
-            <li key={item.id}>{item.name}</li>
-        ))}
-    </ul>
+    <TableContainer mx={'20'} my={'10'}>
+        <Table variant={'striped'} colorScheme={'whatsapp'}>
+            <Thead>
+                <Tr>
+                    <Th>Book Name</Th>
+                </Tr>
+            </Thead>
+            <Tbody>
+                    {data.map(item =>(
+                    <Tr>
+                        <Td key={item.id}>{item.name}</Td>
+                    </Tr>
+                    ))}
+            </Tbody>
+        </Table>
+    </TableContainer>
     </>
   )
 }

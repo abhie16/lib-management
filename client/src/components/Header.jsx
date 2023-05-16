@@ -40,16 +40,16 @@ const Header = () => {
               <Link to={'/books'}>Get All Books</Link>
             </Button>
             <Button onClick={onClose} variant={'ghost'} colorScheme='whatsapp'>
-              <Link to={'/books:id'}>Get A Book</Link>
+              <Link to={'/books/:id'}>Get A Book</Link>
             </Button>
             <Button onClick={onClose} variant={'ghost'} colorScheme='whatsapp'>
-              <Link to={'/books'}>Post A Book</Link>
+              <Link to={'/books/create'}>Post A Book</Link>
             </Button>
             <Button onClick={onClose} variant={'ghost'} colorScheme='whatsapp'>
-              <Link to={'/books:id'}>Update</Link>
+              <Link to={'/books/:id/update'}>Update</Link>
             </Button>
             <Button onClick={onClose} variant={'ghost'} colorScheme='whatsapp'>
-              <Link to={'/books:id'}>Delete</Link>
+              <Link to={'/books/:id/delete'}>Delete</Link>
             </Button>
           </VStack>
 
