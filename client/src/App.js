@@ -9,6 +9,8 @@ import Bookdetails from './components/Bookdetails';
 import BookCreate from './components/BookCreate';
 import BookDelete from './components/BookDelete';
 import BookUpdate from './components/BookUpdate';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path='/books/:id' element={<Bookdetails/>} />
           <Route path='/books/:id/update' element={<BookUpdate/>} />
           <Route path='/books/:id/delete' element={<BookDelete/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
 
         <Footer/>
